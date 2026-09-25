@@ -85,7 +85,8 @@ Wpisz numer swojego noda w **NODE=**  i zapisz plik
 
 Następnie skopiuj ten plik do katalogu /etc/asterisk/scripts/
 ```
-sudo cp /opt/alsa-utils/meteo-alerts/play=alerts.sh /etc/asterisk/scripts/
+sudo cp /opt/alsa-utils/meteo-alerts/play-alerts.sh /etc/asterisk/scripts/
+sudo chown asterisk:asterisk /etc/asterisk/scripts/play-alerts.sh
 ```
 
 Zrób edycje pliku:
