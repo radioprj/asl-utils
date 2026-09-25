@@ -1,4 +1,4 @@
-# Zestaw skryptów i modyfikacji do ASL 3
+## Zestaw skryptów i modyfikacji do ASL 3
  
 ## asl-say
 Zmodyfikowana wersja skryptu korzystająca z polskich plików dźwiękowych do odczytywania czasu, daty oraz adresu IPv4.
@@ -25,6 +25,7 @@ Zestaw różnych skryptów pomocniczych, wykorzystywanych m.in. do:
 Opis konfiguracji serwera strumienia audio Icecast na nodzie ASL. Umożliwia słuchanie transmisji w lokalnej sieci za pomocą przeglądarki internetowej.
  
 ## node-call
+
 Skrypt generujący pliki audio ze znakami wywoławczymi dla wybranego numeru noda. Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
  
 ---
