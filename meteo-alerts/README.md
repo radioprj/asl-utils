@@ -79,6 +79,12 @@ Możesz dodać kod DTMF *620, który umożliwi ręczne odtworzenie aktualnych al
 
 Zrób edycje pliku:
 ```
+sudo nano /opt/asl-utils/meteo-alerts/play-burza.sh
+```
+Wpisz numer swojego noda w **NODE=**  i zapisz plik
+
+Następnie zrób edycję pliku:
+```
 sudo nano /opt/asl-utils/meteo-alerts/play-alerts.sh
 ```
 Wpisz numer swojego noda w **NODE=**  i zapisz plik
