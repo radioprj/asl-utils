@@ -60,18 +60,18 @@ W tym celu w pliku:
 
 
 w sekcji [functions-main] odszukaj fragment:
-
+```
 ;;;;; Autopatch Commands ;;;;;
 ; Note, This may be a good place for other 2 digit frequently used commands
 ;61 = autopatchup,noct = 1,farenddisconnect = 1,dialtime = 20000
 ;62 = autopatchdn
-
+```
 
 i dopisz poniższą linię:
-
+```
 ; Pogoda OpenWeatherMap
 610=cmd,/etc/asterisk/scripts/play-wx.sh
-
+```
 
 Po zapisaniu zmian uruchom ponownie usługę Asterisk:
 
