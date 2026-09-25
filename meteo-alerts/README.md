@@ -118,14 +118,14 @@ Jeżeli korzystasz z projektu:
 
 https://github.com/radioprj/ASL-Dashboard
 
-możesz dodać przycisk wywołujący odczyt aktualnych alertów meteorologicznych.
+Możesz dodać przycisk, który wywołuje odczyt aktualnych alertów meteorologicznych.
 
 W pliku:
 
 /var/www/html/buttons.ini
 
 
-dodaj za sekcją [parrot_off]:
+Dodaj za sekcją [parrot_off]:
 ```ini
 [meteo-alerts]
 title = Meteo Alerts
@@ -141,7 +141,7 @@ Należy mieć świadomość, że rozwiązanie zostało napisane w języku Python
 
 Python jest bardzo elastycznym i wygodnym językiem programowania, jednak aplikacje korzystające z zewnętrznych modułów mogą być podatne na zmiany wprowadzane przez autorów tych bibliotek. W niektórych przypadkach aktualizacja modułów może wymagać dostosowania kodu skryptów.
 
-Nie jest to częste zjawisko, jednak warto mieć świadomość, że może wystąpić.
+Nie jest to częste zjawisko, jednak warto mieć świadomość, że może  się wydarzyć.
 
 Autor nie zapewnia wsparcia technicznego ani bieżącego utrzymania opisanych skryptów. Decydując się na ich używanie, akceptujesz ten fakt i w przypadku problemów będziesz musiał samodzielnie poszukać rozwiązania, korzystając z dokumentacji oraz zasobów dostępnych w Internecie.
 
