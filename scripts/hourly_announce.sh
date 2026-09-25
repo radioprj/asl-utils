@@ -6,7 +6,7 @@ NODE="124567"
 
 # skrypt ktory o pełnej godzinie mówi czas
 if [ -f "/usr/bin/asl-saypl" ];  then
-/usr/bin/asl-saypl -n $NODE -w time24
+/usr/bin/asl-saypl -n ${NODE} -w time24
 fi
 # Nastepnie jesli jest status pogody to podaje pogode
 # Pobierz aktualną godzinę w formacie 00-23 (bez wiodącego zera, np. 8, 12, 16, 20)
