@@ -5,5 +5,5 @@
 NODE="123456"
 
 if [ -f "/opt/asl-utils/weather/status/wx.ulaw" ];  then
-  /usr/sbin/asterisk -rx "rpt localplay $NODE /opt/asl-utils/weather/status/wx"
+  /usr/sbin/asterisk -rx "rpt localplay ${NODE} /opt/asl-utils/weather/status/wx"
 fi
