@@ -30,8 +30,8 @@ Odczyt aktualnej daty i czasu w formacie 24-godzinnym.
 Odczyt adresu IPv4 przypisanego do noda.
 
 
-```markdown
-> Uwaga: skrypt wymaga zainstalowanych polskich plików dźwiękowych:
-> https://github.com/radioprj/ASL-sound-pl
+
+**Uwaga: skrypt wymaga zainstalowanych polskich plików dźwiękowych:**
+https://github.com/radioprj/ASL-sound-pl
 
 
