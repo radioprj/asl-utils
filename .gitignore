@@ -1,2 +1,8 @@
 meteo-alerts/alerts.ini
+meteo-alerts/play-alerts.sh
+meteo-alerts/play-burze.sh
 weather/wxowm.ini
+weather/play-wx.sh
+scripts/hourly_announce.sh
+scripts/play_announce.sh
+
