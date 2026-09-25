@@ -50,14 +50,26 @@ Szczegóły konfiguracji znajdują się w katalogu:
 
 /opt/asl-utils/scripts
 
-Dostęp przez DTMF
+**Dostęp przez DTMF**
 
 Możesz dodać kod DTMF *610, który umożliwi odczyt aktualnej pogody z poziomu AllStarLink.
 
-W tym celu w pliku:
+Zrób edycje pliku:
+```
+sudo nano /opt/asl-utils/meteo-alerts/play-wx.sh
+```
+Wpisz numer swojego noda w **NODE=**  i zapisz plik
 
-/etc/asterisk/rpt.conf
+Następnie skopiuj ten plik do katalogu /etc/asterisk/scripts/
+```
+sudo cp /opt/alsa-utils/meteo-alerts/play-wx.sh /etc/asterisk/scripts/
+sudo chown asterisk:asterisk /etc/asterisk/scripts/play-wx.sh
+```
 
+Zrób edycje pliku:
+```
+sudo nano /etc/asterisk/rpt.conf
+```
 
 w sekcji [functions-main] odszukaj fragment:
 ```
@@ -74,23 +86,21 @@ i dopisz poniższą linię:
 ```
 
 Po zapisaniu zmian uruchom ponownie usługę Asterisk:
-
+```
 sudo systemctl restart asterisk
-
+```
 Integracja z ASL-Dashboard
 
 Jeżeli korzystasz z projektu:
 
 http://github.com/radioprj/ASL-Dashboard
 
-możesz dodać przycisk wywołujący odczyt aktualnej pogody.
-
-W pliku:
-
+Możesz dodać przycisk wywołujący odczyt aktualnej pogody W pliku:
+```
 /var/www/html/buttons.ini
+```
 
-
-dodaj poniższą sekcję za wpisem [parrot_off]:
+Dodaj poniższą sekcję za wpisem [parrot_off]:
 ```ini
 [weather]
 title = Weather
@@ -98,7 +108,7 @@ color = blue
 cmds[] = *610
 ```
 
-Po zapisaniu zmian na pulpicie pojawi się niebieski przycisk wywołujący komunikat pogodowy.
+Po zapisaniu zmian na pulpicie pojawi się niebieski przycisk uruchamiający komunikat pogodowy.
 
 Uwagi końcowe
 
@@ -106,7 +116,7 @@ Należy mieć świadomość, że rozwiązanie zostało napisane w języku Python
 
 Python jest bardzo elastycznym i wygodnym językiem programowania, jednak aplikacje napisane z jego wykorzystaniem mogą być wrażliwe na zmiany w bibliotekach lub modułach zewnętrznych. Autorzy tych komponentów mogą w przyszłości wprowadzać zmiany wymagające dostosowania kodu skryptów.
 
-Nie jest to częsta sytuacja, jednak warto mieć świadomość, że może wystąpić.
+Nie jest to częsta sytuacja, jednak warto mieć świadomość, że może się wydarzyć.
 
 Autor nie zapewnia wsparcia technicznego ani bieżącego utrzymania opisywanych skryptów. Decydując się na ich używanie, akceptujesz ten fakt i w przypadku problemów będziesz musiał samodzielnie poszukać rozwiązania, korzystając z dostępnej dokumentacji oraz zasobów Internetu.
 
