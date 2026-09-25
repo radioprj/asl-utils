@@ -11,6 +11,12 @@ Skrypt służący do automatycznego odtwarzania komunikatów głosowych:
 
 ## Instalacja
 
+Zrób edycje pliku:
+```
+sudo nano /opt/asl-utils/scripts/hourly-announce.sh
+```
+Wpisz w **NODE=** numer swojego noda i zapisz plik
+
 Skopiuj plik CRON do katalogu `/etc/cron.d`:
 
 ```bash
