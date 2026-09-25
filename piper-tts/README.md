@@ -29,8 +29,8 @@ Więcej informacji o dostępnych opcjach znajdziesz w dokumentacji programu:
 
 man asl-tts
 
-Polski model głosu do piper jest dołączony do tego projektu z strony autora tego modelu:
-```
+**Polski model głosu do piper jest dołączony do tego projektu z strony autora tego modelu:**
+
 https://huggingface.co/WitoldG/polish_piper_models
-````
+
 
