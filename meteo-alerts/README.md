@@ -15,7 +15,7 @@ System bazuje na danych udostępnianych przez serwis:
 
 https://burze.dzis.net
 
-Przed rozpoczęciem korzystania z usługi zaleca się zapoznanie z zasadami serwisu:
+Przed rozpoczęciem korzystania z usługi zaleca się zapoznanie się z zasadami serwisu:
 
 https://burze.dzis.net/?page=zasady
 
