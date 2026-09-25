@@ -40,13 +40,13 @@ Zainstaluj wymagane biblioteki:
 ```bash
 sudo -s
 /opt/asl-utils/meteo-alerts/install-pkg.sh
-
+```
 Konfiguracja
 
 Klucz API z serwisu burze.dzis.net należy wpisać w pliku alerts.ini, zastępując przykładową wartość:
-
+```
 key=12345678901234567890
-
+```
 
 W tym samym pliku należy podać:
 
@@ -58,11 +58,11 @@ Na podstawie tych parametrów będą pobierane alerty dla wybranego regionu.
 Konfiguracja CRON
 
 Plik alerts-cron należy skopiować do katalogu /etc/cron.d/:
-
+```
 sudo -s
 cp /opt/asl-utils/meteo-alerts/alerts-cron /etc/cron.d/
 chown root:root /etc/cron.d/alerts-cron
-
+```
 
 Jeżeli dla wskazanego obszaru będą dostępne ostrzeżenia meteorologiczne, system będzie je automatycznie odtwarzał:
 
@@ -70,17 +70,17 @@ o pełnej godzinie,
 30 minut po każdej pełnej godzinie będą dodatkowo odtwarzane informacje o aktywnych burzach.
 
 Szczegóły harmonogramu znajdują się w katalogu:
-
+```
 /opt/asl-utils/scripts
-
-Dostęp przez DTMF
+```
+**Dostęp przez DTMF**
 
 Możesz dodać kod DTMF *620, który umożliwi ręczne odtworzenie aktualnych alertów meteorologicznych.
 
 W pliku:
-
+```
 /etc/asterisk/rpt.conf
-
+```
 
 w sekcji [functions-main] odszukaj fragment:
 ```
