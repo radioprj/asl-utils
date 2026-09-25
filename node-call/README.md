@@ -78,7 +78,7 @@ W przypadku braku pliku dla danego noda Asterisk będzie działał zgodnie ze st
 
 
 **Opcje skryptu**
-
+```
 Opcja	Opis-h	Wyświetla pomoc i listę dostępnych opcji.
 -a	Przetwarza wszystkie nody. Tworzy brakujące pliki i pomija już istniejące, chyba że użyto opcji -r.
 -i	Dodaje po znaku wywoławczym słowo „node” oraz numer noda.
@@ -90,8 +90,8 @@ Opcja	Opis-h	Wyświetla pomoc i listę dostępnych opcji.
 -r	Wymusza ponowne wygenerowanie plików nawet wtedy, gdy już istnieją.
 -s PATH	Wskazuje katalog zawierający plik astdb.txt.
 -p PATH	Określa ścieżkę do poprzedniej bazy danych używanej do wykrywania zmian.
-
-**Przykłady użycia*
+```
+**Przykłady użycia**
 
 Pierwsze pełne wygenerowanie całej bazy bez pytania o potwierdzenie:
 ```
