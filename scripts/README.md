@@ -38,8 +38,8 @@ Wymagana jest instalacja:
 polskich plików dźwiękowych:
 ```
 https://github.com/radioprj/ASL-sound-pl
-``
-- polskiej wersji skryptu asl-say:
+```
+polskiej wersji skryptu asl-say:
 
 ```
 /opt/asl-utils/asl-say/
