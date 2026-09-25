@@ -20,4 +20,4 @@ fi
 
 # Wywołanie komendy Asteriska do odtworzenia lokalnego (localplay)
 # Użyj "localplay" aby dźwięk poszedł tylko w eter, lub "playback" aby poszedł też do linków
-/usr/sbin/asterisk -rx "rpt localplay $NODE custom/$SOUND_FILE"
+/usr/sbin/asterisk -rx "rpt localplay ${NODE} custom/$SOUND_FILE"
