@@ -9,7 +9,7 @@ Zainstaluj pakiet `asl3-tts`:
 ```bash
 sudo -s
 apt install -y asl3-tts
-
+```
 
 Następnie skopiuj skrypt asl-tts-pl do katalogu /usr/bin:
 ```
