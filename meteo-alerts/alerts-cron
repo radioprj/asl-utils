@@ -1,0 +1,12 @@
+CRONDARGS=-1 -m off
+MAILTO=""
+#
+# Pliki WAV opady na okres zimy grudzien-luty
+10 2,9,18 1,3 12 * root /opt/asl-utils/meteo-alerts/utils/zima.sh >/dev/null 2>&1
+#
+# Pliki WAV opady na okres lata marzec-listopad
+10 2,9,18 15,17 3 * root /opt/asl-utils/meteo-alerts/utils/lato.sh >/dev/null 2>&1
+#
+# Alerty pogodowe - pobieranie danych
+58,28 * * * * root nice /opt/asl-utils/meteo-alerts/alerts.py >/dev/null 2>&1
+#
