@@ -7,7 +7,7 @@ Skopiuj plik do katalogu `/usr/bin`:
 ```bash
 sudo -s
 cp /opt/asl-utils/asl-say/asl-saypl /usr/bin/
-
+```
 Użycie
 
 Polska wersja skryptu korzysta z polskich plików dźwiękowych oraz obsługuje odczyt czasu i daty w języku polskim.
