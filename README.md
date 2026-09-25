@@ -28,8 +28,8 @@ Opis konfiguracji serwera strumienia audio Icecast na nodzie ASL. Umożliwia sł
 Skrypt generujący pliki audio ze znakami wywoławczymi dla wybranego numeru noda. 
 Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
  
-.
-Wymienione wyżej skrypty korzystają z polskiej wersji plików dźwiękowych dostępnych w repozytorium:
+
+**Wymienione wyżej skrypty korzystają z polskiej wersji plików dźwiękowych dostępnych w repozytorium:**
 
 ``` 
 https://github.com/radioprj/ASL-sound-pl
