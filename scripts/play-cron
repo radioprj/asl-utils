@@ -1,0 +1,7 @@
+CRONDARGS=-1 -m off
+MAILTO=""
+#
+#
+# Nadawanie komunikatów alert co 60 burza co 30 min jesli sa dostepne
+0 * * * * root /opt/asl-utils/scripts/hourly_announce.sh  >/dev/null 2>&1
+30 * * * * root /opt/asl-utils/meteo-alerts/play-burze.sh >/dev/null 2>&1
