@@ -17,20 +17,20 @@ Skopiuj plik CRON do katalogu `/etc/cron.d`:
 sudo -s
 cp play-cron /etc/cron.d/
 chown root:root /etc/cron.d/play-cron
-
+```
 Konfiguracja
 Pogoda OpenWeatherMap
 
 Szczegóły konfiguracji znajdują się w katalogu:
-
+```
 /opt/asl-utils/weather/
-
+```
 Alerty meteorologiczne
 
 Szczegóły konfiguracji znajdują się w katalogu:
-
+```
 /opt/asl-utils/meteo-alerts/
-
+```
 **Wymagania**
 
 Wymagana jest instalacja:
