@@ -14,10 +14,10 @@ Otwórz plik:
 ```bash
 sudo -s
 nano /etc/asterisk/extensions.conf
-
+```
 
 W oryginalnej funkcji TIME zakomentuj wszystkie linie, dodając na początku każdej znak ;:
-
+```
 ; Say the time of day
 ;exten => TIME,1,ExecIfTime(0:00-11:59,*,*,*?Playback(rpt/goodmorning))
 ; same => n,ExecIfTime(12:00-17:59,*,*,*?Playback(rpt/goodafternoon))
@@ -26,12 +26,11 @@ W oryginalnej funkcji TIME zakomentuj wszystkie linie, dodając na początku ka�
 ; same => n,SayUnixTime(RPT_TELEM_TIME(),,HM)
 ; ;same => n,SayUnixTime(RPT_TELEM_TIME(),,${IF($[${STRFTIME(${UNIXTIME},,%-M) = 0}]?IMp:Ip)})
 ; same => n,Hangup()
-
+```
 
 Następnie wklej poniższą polską wersję funkcji bezpośrednio pod zakomentowanym fragmentem:
-
+```
 ; Say the time of day - Polska wersja
-
 exten => TIME,1,ExecIfTime(0:00-11:59,*,*,*?Playback(rpt/goodmorning))
  same => n,ExecIfTime(12:00-17:59,*,*,*?Playback(rpt/goodafternoon))
  same => n,ExecIfTime(18:00-23:59,*,*,*?Playback(rpt/goodevening))
@@ -41,7 +40,7 @@ exten => TIME,1,ExecIfTime(0:00-11:59,*,*,*?Playback(rpt/goodmorning))
  same => n,Playback(digits/ho-${GODZINA})
  same => n,SayNumber(${MINUTY})
  same => n,Hangup()
-
+```
 **Restart Asterisk**
 
 Po zapisaniu zmian należy ponownie uruchomić usługę Asterisk:
