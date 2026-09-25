@@ -77,9 +77,20 @@ Szczegóły harmonogramu znajdują się w katalogu:
 
 Możesz dodać kod DTMF *620, który umożliwi ręczne odtworzenie aktualnych alertów meteorologicznych.
 
-W pliku:
+Zrób edycje pliku:
 ```
-/etc/asterisk/rpt.conf
+sudo nano /opt/asl-utils/meteo-alerts/play-alerts.sh
+```
+Wpisz numer swojego noda w **NODE=**  i zapisz plik
+
+Następnie skopiuj ten plik do katalogu /etc/asterisk/scripts/
+```
+sudo cp /opt/alsa-utils/meteo-alerts/play=alerts.sh /etc/asterisk/scripts/
+```
+
+Zrób edycje pliku:
+```
+sudo nano /etc/asterisk/rpt.conf
 ```
 
 w sekcji [functions-main] odszukaj fragment:
