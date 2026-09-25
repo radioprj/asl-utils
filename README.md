@@ -25,10 +25,9 @@ Zestaw różnych skryptów pomocniczych, wykorzystywanych m.in. do:
 Opis konfiguracji serwera strumienia audio Icecast na nodzie ASL. Umożliwia słuchanie transmisji w lokalnej sieci za pomocą przeglądarki internetowej.
  
 ## node-call
-
-Skrypt generujący pliki audio ze znakami wywoławczymi dla wybranego numeru noda. Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
+Skrypt generujący pliki audio ze znakami wywoławczymi dla wybranego numeru noda. 
+Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
  
----
  
 Wymienione wyżej skrypty korzystają z polskiej wersji plików dźwiękowych dostępnych w repozytorium:
 
