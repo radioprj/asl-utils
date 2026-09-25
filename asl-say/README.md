@@ -17,6 +17,7 @@ asl-saypl -n numer_noda_twojego -w datetime24
 asl-saypl -n numer_noda_twojego -w ip4
 ```
 Dostępne opcje
+
 **time24**
 
 Odczyt aktualnego czasu w formacie 24-godzinnym.
