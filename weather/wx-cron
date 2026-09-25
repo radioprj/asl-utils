@@ -1,0 +1,7 @@
+CRONDARGS=-1 -m off
+MAILTO=""
+#
+#
+# Pogoad OpenWeatherMap - pobieranie danych
+25,55 * * * * root /opt/asl-utils/weather/wxowm.py >/dev/null 2>&1
+#
