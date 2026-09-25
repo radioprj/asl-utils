@@ -39,13 +39,11 @@ Szczegóły konfiguracji znajdują się w katalogu:
 ```
 **Wymagania**
 
-Wymagana jest instalacja:
+Wymagana jest instalacja polskich plików dźwiękowych:
 
-polskich plików dźwiękowych:
-```
 https://github.com/radioprj/ASL-sound-pl
-```
-polskiej wersji skryptu asl-say:
+
+oraz polskiej wersji skryptu asl-say:
 
 ```
 /opt/asl-utils/asl-say/
