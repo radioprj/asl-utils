@@ -34,3 +34,10 @@ Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
 ``` 
 https://github.com/radioprj/ASL-sound-pl
 ```
+## Instalacja pakietu
+```
+sudo -s
+cd /opt
+git clone https://github.com/radioprj/asl-utils.git
+```
+
