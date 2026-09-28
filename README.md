@@ -31,9 +31,9 @@ Dzięki temu Asterisk może odczytywać znak wywoławczy zamiast numeru noda.
 
 **Wymienione wyżej skrypty korzystają z polskiej wersji plików dźwiękowych dostępnych w repozytorium:**
 
-``` 
 https://github.com/radioprj/ASL-sound-pl
-```
+
+
 ## Instalacja pakietu
 ```
 sudo -s
