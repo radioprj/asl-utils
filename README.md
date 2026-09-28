@@ -41,3 +41,4 @@ cd /opt
 git clone https://github.com/radioprj/asl-utils.git
 ```
 
+**Używasz na własną odpowiedzialność i autor nie ponosi odpowiedzialności za wykorzystane rozwiązanie i wynikające z niego skutki.**
