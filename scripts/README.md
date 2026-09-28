@@ -11,11 +11,12 @@ Skrypt służący do automatycznego odtwarzania komunikatów głosowych:
 
 ## Instalacja
 
-Zrób edycje pliku:
+Zrób edycję pliku:
 ```
 sudo nano /opt/asl-utils/scripts/hourly-announce.sh
 ```
-Wpisz w **NODE=** numer swojego noda i zapisz plik
+Wpisz w **NODE=** numer swojego noda ewentualnie ustaw inne godziny dla komunikatów pogody zamiast **8|12|16|20**
+Zapisz plik
 
 Skopiuj plik CRON do katalogu `/etc/cron.d`:
 
