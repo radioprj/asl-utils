@@ -1,9 +1,9 @@
-Konfiguracja serwera icecast do wysyłania audio strumienia w lokalnej sieci domowej
+Konfiguracja serwera Icecast do wysyłania strumienia audio w lokalnej sieci domowej
 ---------------------------------------------------
 
-Poniżej opis jak uruchomić na swoim ASL nodzie wysyłanie strumienia audio w lokalnej sieci
-i słuchanie go w np ASL Dashboard. Pamietaj że audio odbierane via strumien icecast
-idzie z opoźnieniem do realnego audio i służy tylko do monitorowania aktyności na nodzie.
+Poniżej opis, jak uruchomić na swoim ASL nodzie wysyłanie strumienia audio w lokalnej sieci
+i słuchanie go w np. ASL Dashboard. **Pamiętaj, że audio odbierane via strumień Icecast
+idzie z opóźnieniem (od kilku do kilkunastu sekund) do realnego audio i służy tylko do monitorowania aktywności na nodzie**.
 
 
 Zaloguj się na swój węzeł przez SSH i przejdź na konto administratora:
@@ -24,14 +24,17 @@ Podczas instalacji pojawi się tekstowy kreator konfiguracji:
 System zapyta, czy chcesz skonfigurować Icecast2 – wybierz Tak (Yes).
 Zostaniesz poproszony o podanie nazwy hosta (hostname) – możesz zostawić domyślne localhost.
 Następnie system poprosi o hasła: source password, relay password oraz admin password (tu możesz dać inne hasło). 
-Jeśli bedziesz to używał tylko w lokalnej domoqwej sieci ustaw jedno proste hasło (np. mojehaslo987) 
+Jeśli będziesz to używał tylko w lokalnej domowej sieci ustaw jedno proste hasło (np. mojehaslo987) 
 dla wszystkich trzech opcji – będzie ono potrzebne w następnych krokach.
 Po zakończeniu instalacji serwer Icecast automatycznie uruchomi się w tle na domyślnym porcie 8000.
 
 Krok 2: Konfiguracja lokalnego strumienia (asl-broadcastify)
 
-Wykorzystamy usługę asl-broadcastify, ale zamiast do internetu, skierujemy ją do naszego lokalnego serwera Icecast.
-Przejdź do katalogu konfiguracyjnego:bashcd /etc/asterisk/broadcastify
+Wykorzystamy usługę asl-broadcastify, ale zamiast do internetu skierujemy ją do naszego lokalnego serwera Icecast.
+Przejdź do katalogu konfiguracyjnego:
+```
+cd /etc/asterisk/broadcastify
+```
 (patrz też na opis: https://allstarlink.github.io/adv-topics/broadcastify/#configure-asterisk)
 Skopiuj szablon konfiguracji dla swojego node'a (zastąp TWÓJ_NODE swoim numerem, np. 63001):
 
@@ -93,20 +96,22 @@ systemctl restart asterisk
 ```
 
 🛠️ Odblokowanie portu 8000 dla icesact:
-w konsoli (SSH)Zaloguj się na roota (lub użyj sudo) i wpisz poniższe komendy narzędzia firewall-cmd:Dodaj port 8000 dla połączeń TCP na stałe:bashsudo firewall-cmd --add-port=8000/tcp --permanent
-
+w konsoli (SSH)Zaloguj się na roota (lub użyj sudo) i wpisz poniższe komendy narzędzia firewall-cmd:Dodaj port 8000 dla połączeń TCP na stałe:
+```
+sudo firewall-cmd --add-port=8000/tcp --permanent
+```
 Przeładuj konfigurację zapory, aby zmiany natychmiast weszły w życie:
 
 ```
 sudo firewall-cmd --reload
 ```
 
-Możesz teraz sprawdzić w przeglądrace wpisując 
+Możesz teraz sprawdzić w przeglądarce wpisując 
 
 ```
 http://ip_adres_noda:8000
 ```
-Powinień zobaczyć pdobną strona jak niżej obrazek z wykazem dostępu audio via icecast 
+Zobaczysz podobną stronę jak niżej obrazek z wykazem dostępu audio via icecast 
 
 link do strumienia audio to który możesz wpisać w config.ini w ASL Dashboard to
 
