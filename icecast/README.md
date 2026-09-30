@@ -1,10 +1,10 @@
 Konfiguracja serwera Icecast do wysyłania strumienia audio w lokalnej sieci domowej
 ---------------------------------------------------
 
-Poniżej opis, jak uruchomić na swoim ASL nodzie wysyłanie strumienia audio w lokalnej sieci
-i słuchanie go w np. ASL Dashboard. **Pamiętaj, że audio odbierane via strumień Icecast
+Poniżej opis, jak uruchomić na swoim nodzie ASL wysyłanie strumienia audio w lokalnej sieci
+i słuchać go w np. ASL Dashboard. **Pamiętaj, że audio odbierane via strumień Icecast
 idzie z opóźnieniem (od kilku do kilkunastu sekund) do realnego audio i służy tylko do monitorowania aktywności na nodzie**.
-
+Wynika to z tego, że Chrome, Firefox itp. domyślnie buforują od kilku do kilkunastu sekund danych, zanim w ogóle zaczną odtwarzać dźwięk, aby zapobiec przerwom w razie wahań sieci.
 
 Zaloguj się na swój węzeł przez SSH i przejdź na konto administratora:
 
