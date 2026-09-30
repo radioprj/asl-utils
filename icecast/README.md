@@ -83,7 +83,8 @@ Otwórz plik rpt.conf:
 ```
 nano /etc/asterisk/rpt.conf
 ```
-Znajdź sekcję swojego node'a (np. [63001] lub [63001](node-main)) i dopisz w niej linię wskazującą na plik FIFO:
+Znajdź sekcję swojego node'a (np. 
+``` [63001] lub [63001](node-main)``` i dopisz w niej linię wskazującą na plik FIFO:
 
 ```
 outstreamcmd = /usr/libexec/asl3/rpt_audio_writer,/var/lib/asterisk/TWÓJ_NODE.fifo
