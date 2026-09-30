@@ -97,7 +97,9 @@ systemctl restart asterisk
 ```
 
 🛠️ Odblokowanie portu 8000 dla icesact:
-w konsoli (SSH)Zaloguj się na roota (lub użyj sudo) i wpisz poniższe komendy narzędzia firewall-cmd:Dodaj port 8000 dla połączeń TCP na stałe:
+w konsoli (SSH) i wpisz poniższe komendy dla narzędzia firewall-cmd:
+
+Dodaj port 8000 dla połączeń TCP na stałe:
 ```
 sudo firewall-cmd --add-port=8000/tcp --permanent
 ```
