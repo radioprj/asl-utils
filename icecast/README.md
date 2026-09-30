@@ -120,7 +120,9 @@ link do strumienia audio to który możesz wpisać w config.ini w ASL Dashboard 
 http://ip_adres_noda:8000/asl.mp3
 ```
 
-![](http://github.com/radioprj/asl-utils/icecast.png)
+![](https://github.com/radioprj/asl-utils/blob/main/icecast/icecast.png)
+
+
 
 
 
