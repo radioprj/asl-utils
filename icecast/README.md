@@ -28,6 +28,21 @@ Jeśli będziesz to używał tylko w lokalnej domowej sieci ustaw jedno proste h
 dla wszystkich trzech opcji – będzie ono potrzebne w następnych krokach.
 Po zakończeniu instalacji serwer Icecast automatycznie uruchomi się w tle na domyślnym porcie 8000.
 
+Warto wydłużyć czas oczekiwania na pakiety. Otwórz plik konfiguracyjny Icecast:
+```
+sudo nano /etc/icecast2/icecast.xml
+```
+
+Znajdź sekcję <limits> i zmień wartość <source-timeout> na wyższą, na przykład 30 lub 60 sekund:
+```
+<source-timeout>60</source-timeout>
+````
+
+Zrestartuj serwer Icecast, aby zapisać zmiany:
+```
+sudo systemctl restart icecast2
+```
+
 Krok 2: Konfiguracja lokalnego strumienia (asl-broadcastify)
 
 Wykorzystamy usługę asl-broadcastify, ale zamiast do internetu skierujemy ją do naszego lokalnego serwera Icecast.
