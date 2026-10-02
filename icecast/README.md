@@ -59,15 +59,16 @@ np
 sudo cp 1999.conf.example 65345.conf
 ```
 
-Otwórz plik do edycji:
+Otwórz plik do edycji **XXXXXX wpisz numer Twojego Noda**
 
 ```
 sudo nano XXXXXX.conf
 ```
-**XXXXXX wpisz numer Twojego Noda**
+
 
 Zmodyfikuj parametry w pliku. Najważniejsze jest skierowanie strumienia na adres lokalny (127.0.0.1):
 
+**XXXXXX wpisz numer Twojego Noda w wierszu XXXXXX.fifo**
 
 ```
 FIFO=/var/lib/asterisk/XXXXXX.fifo
