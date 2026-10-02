@@ -51,23 +51,26 @@ Przejdź do katalogu konfiguracyjnego:
 cd /etc/asterisk/broadcastify
 ```
 (patrz też na opis: https://allstarlink.github.io/adv-topics/broadcastify/#configure-asterisk)
-Skopiuj szablon konfiguracji dla swojego node'a (zastąp TWÓJ_NODE swoim numerem, np. 63001):
+Skopiuj szablon konfiguracji dla swojego node'a (**zastąp XXXXXX swoim numerem, np. 63001**):
 
 ```
-cp 1999.conf.example TWÓJ_NODE.conf
+sudo cp 1999.conf.example XXXXXX.conf
+np
+sudo cp 1999.conf.example 65345.conf
 ```
 
 Otwórz plik do edycji:
 
 ```
-nano TWÓJ_NODE.conf
+sudo nano XXXXXX.conf
 ```
+**XXXXXX wpisz numer Twojego Noda**
+
 Zmodyfikuj parametry w pliku. Najważniejsze jest skierowanie strumienia na adres lokalny (127.0.0.1):
 
-**TWÓJ_NODE to numer Twojego Noda**
 
 ```
-FIFO=/var/lib/asterisk/TWÓJ_NODE.fifo
+FIFO=/var/lib/asterisk/XXXXXX.fifo
 
 # Dane lokalnego serwera Icecast
 ICECAST_HOST=127.0.0.1
@@ -84,10 +87,11 @@ STREAM_URL="localhost"
 ```
 
 Zapisz plik (Ctrl+O, Enter) i zamknij edytor (Ctrl+X).Włącz i uruchom usługę przesyłania audio:
+**XXXXXX wpisz numer Twojego Noda**
 
 ```
-systemctl enable asl-broadcastify@TWÓJ_NODE
-systemctl start asl-broadcastify@TWÓJ_NODE
+systemctl enable asl-broadcastify@XXXXXX
+systemctl start asl-broadcastify@XXXXXX
 ```
 
 Krok 3: Powiązanie Asteriska z potokiem audio
@@ -101,8 +105,10 @@ nano /etc/asterisk/rpt.conf
 Znajdź sekcję swojego node'a (np. 
 ``` [63001] lub [63001](node-main)``` i dopisz w niej linię wskazującą na plik FIFO:
 
+**XXXXXX wpisz numer Twojego Noda**
+
 ```
-outstreamcmd = /usr/libexec/asl3/rpt_audio_writer,/var/lib/asterisk/TWÓJ_NODE.fifo
+outstreamcmd = /usr/libexec/asl3/rpt_audio_writer,/var/lib/asterisk/XXXXXX.fifo
 ```
 
 Zapisz plik i zrestartuj Asteriska:
