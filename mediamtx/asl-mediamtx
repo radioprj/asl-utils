@@ -1,0 +1,23 @@
+#!/bin/bash
+# asl-mediamtx NODE
+# FIFO z Asteriska (s16le, 8 kHz, mono) -> Opus -> MediaMTX (RTSP, tylko lokalnie)
+set -o pipefail
+
+NODE="${1:?Usage: asl-mediamtx NODE}"
+[[ "$NODE" =~ ^[0-9A-Za-z_-]+$ ]] || { echo "Invalid node: $NODE" >&2; exit 2; }
+
+FIFO="/var/lib/asterisk/${NODE}.fifo"
+RTSP_URL="rtsp://127.0.0.1:8554/${NODE}"
+
+INPUT_SAMPLERATE=8000
+INPUT_CHANNELS=1
+OPUS_BITRATE=24k
+OPUS_CHANNELS=2      # jesli w przegladarce bedzie cisza, sprobuj 1
+
+[ -p "$FIFO" ] || { rm -f "$FIFO"; mkfifo -m 660 "$FIFO"; }
+
+exec ffmpeg -nostdin -hide_banner -loglevel warning \
+    -f s16le -ar "$INPUT_SAMPLERATE" -ac "$INPUT_CHANNELS" -i "$FIFO" \
+    -c:a libopus -application voip -b:a "$OPUS_BITRATE" -frame_duration 20 \
+    -ar 48000 -ac "$OPUS_CHANNELS" \
+    -f rtsp -rtsp_transport tcp "$RTSP_URL"

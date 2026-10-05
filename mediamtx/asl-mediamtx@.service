@@ -1,0 +1,27 @@
+[Unit]
+Description=ASL node %i audio encoder for MediaMTX (WebRTC)
+After=asterisk.service mediamtx.service network-online.target
+Wants=mediamtx.service network-online.target
+PartOf=asterisk.service
+
+# Don't restart forever if the config is broken
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=asterisk
+Group=asterisk
+ExecStart=/opt/mediamtx/asl-mediamtx %i
+Restart=always
+RestartSec=5
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/asterisk
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+[Unit]
+Description=MediaMTX media server (ASL node audio over WebRTC)
+After=network-online.target
+Wants=network-online.target
+
+# Don't restart forever if the config is broken
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=mediamtx
+Group=mediamtx
+ExecStart=/opt/mediamtx/mediamtx /opt/mediamtx/mediamtx.yml
+Restart=always
+RestartSec=5
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

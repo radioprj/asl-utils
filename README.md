@@ -21,8 +21,8 @@ Zestaw różnych skryptów pomocniczych, wykorzystywanych m.in. do:
 - odczytywania informacji pogodowych o wybranych porach,
 - odczytywania alertów meteorologicznych, jeśli są dostępne.
  
-## icecast
-Opis konfiguracji serwera strumienia audio Icecast na nodzie ASL. Umożliwia słuchanie transmisji w lokalnej sieci za pomocą przeglądarki internetowej.
+## mediamtx
+Opis konfiguracji serwera strumienia audio na nodzie ASL. Umożliwia słuchanie transmisji w lokalnej sieci za pomocą przeglądarki internetowej.
  
 ## node-call
 Skrypt generujący pliki audio ze znakami wywoławczymi dla wybranego numeru noda. 
@@ -40,5 +40,13 @@ sudo -s
 cd /opt
 git clone https://github.com/radioprj/asl-utils.git
 ```
+
+## Aktualizacja
+```
+sudo -s
+cd /opt/asl-utils
+git pull origin main
+```
+
 
 **Używasz na własną odpowiedzialność i autor nie ponosi odpowiedzialności za wykorzystane rozwiązanie i wynikające z niego skutki.**

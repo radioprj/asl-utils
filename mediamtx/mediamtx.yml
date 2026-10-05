@@ -1,0 +1,28 @@
+# Minimalna konfiguracja MediaMTX dla audio z noda ASL3 -> przegladarka (WebRTC)
+# Przetestowana z MediaMTX v1.21.1. Pelna, domyslna konfiguracja jest w archiwum release.
+logLevel: info
+
+# Publikuje tylko lokalny ffmpeg (asl-mediamtx)
+rtsp: true
+rtspTransports: [tcp]
+rtspAddress: 127.0.0.1:8554
+
+# Sygnalizacja WHEP tylko lokalnie - z zewnatrz przez Apache (/whep/)
+webrtc: true
+webrtcAddress: 127.0.0.1:8889
+# Media (UDP) - ten jeden port musi byc otwarty dla sluchaczy
+webrtcLocalUDPAddress: :8189
+# Tylko dla sluchaczy spoza LAN: wpisz publiczny adres IP lub domene i zrestartuj mediamtx
+#webrtcAdditionalHosts: [moja.domena.pl]
+
+rtmp: false
+hls: false
+srt: false
+moq: false
+api: false
+metrics: false
+pprof: false
+playback: false
+
+paths:
+  all_others:
