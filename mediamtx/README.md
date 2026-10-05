@@ -3,7 +3,8 @@ Konfiguracja słuchania strumienia audio z noda ASL3
 -------------------------------------------------------
 
 W nowej wersji słuchania strumienia audio z noda ASL3 w ASL-dashboard zostało zastosowane nowe rozwiązanie na bazie MediaMTX (WebRTC). 
-Icecast2, który wprowadzał opóźnienie ok. 18–20 sekund. Rozwiązanie to udostępnia audio do słuchania w player na dashboardzie z minimalnym opóźnieniem.
+Icecast2 używany wczesniej wprowadzał opóźnienie ok. 18–20 sekund. 
+Rozwiązanie na bazie MediaMTX (WebRTC) udostępnia audio do słuchania w player na dashboardzie z minimalnym opóźnieniem.
 
 **Ważna uwaga jeśli do tej pory używałeś wysyłanie strumienia audio via Icecast2 musisz wyłączyć 
 tę konfigurację:**
